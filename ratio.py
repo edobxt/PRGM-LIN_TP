@@ -23,4 +23,4 @@ def ratio(A, q):
     else:
       X.insert(i, 10^6)
 
-  return np.argmin(X) - 1
+  return np.argmin(X)

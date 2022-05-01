@@ -5,14 +5,13 @@ import numpy as np
 from simplexe import simplexe
 
 A = np.array([
-    [-3, 2, 1, 0, 0, 0, 2], 
-    [-1, 2, 0, 1, 0, 0, 4], 
-    [1, 1, 0, 0, 1, 0, 5],
-    [0, 1, 0, 0, 0, 1, 50],
-    [-1, -2, 0, 0, 0, 0, 0],
+  [0, -12, -4, 1, 0, 5, 0],
+  [0, 0, 1, 0, 1, 0, 5],
+  [1, 3, 1, 0, 0, -1, 3],
+  [0, -29, 20, 0, 0, 10, -30]
 ])
-print(f'Simplexe = \n {A} \n')
+
+print(f'Simplexe de base = \n {A} \n')
 
 X = simplexe(A)
-#X = ratio(A, 0)
-print(f'Resultat = \n {X}')
+print(f'Tableau final = \n {X}')
