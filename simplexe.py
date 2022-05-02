@@ -2,6 +2,7 @@ from maximal import critere_maximalite
 from pivot import pivot
 from ratio import ratio
 from point import point
+from point_simplifie import point_simplifie
 import numpy as np
 
 def simplexe(A):
@@ -32,6 +33,7 @@ def simplexe(A):
   print(f'La fonction est maximié à {X[l-1, m-1]} \n')
 
   p = point(X)
-  print(f'P* a les coordonnées {p} \n')
+  p_s = point_simplifie(A, p)
+  print(f'Le point P a les coordonnées {p} ou {p_s} \n')
   
   return X

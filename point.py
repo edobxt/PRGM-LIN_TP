@@ -2,6 +2,7 @@ import numpy as np
 
 def index_du_un_de_colonne(A, colonne):
   l, m = np.shape(A)
+  
   for i in np.arange(l):
     if A[i][colonne] == 1:
       return i
