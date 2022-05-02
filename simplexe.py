@@ -33,7 +33,7 @@ def simplexe(A):
   print(f'La fonction est maximié à {X[l-1, m-1]} \n')
 
   p = point(X)
-  p_s = point_simplifie(A, p)
-  print(f'Le point P a les coordonnées {p} ou {p_s} \n')
+  #p_s = point_simplifie(A, p)
+  print(f'Le point P a les coordonnées {p} \n')
   
   return X
