@@ -1,16 +1,19 @@
-from maximal import maximal
+from maximal import critere_maximalite
 from pivot import pivot
 from ratio import ratio
+from point import point
+import numpy as np
 
 def simplexe(A):
   # copie du simplexe afin d'effectuer les opérations
   X = A.copy()
+  l, m = np.shape(A)
   nb_pivotement = 1
 
   # tant qu'il y a des positifs sur la dernière ligne
-  while X[X.shape[0]-1, maximal(X)] > 0:
+  while X[X.shape[0]-1, critere_maximalite(X)] > 0:
     # récupération de la ligne et de la colonne pivot
-    index_colonne_pivot = maximal(X)
+    index_colonne_pivot = critere_maximalite(X)
     index_ligne_pivot = ratio(X, index_colonne_pivot)
 
     print(f'Pivotement {nb_pivotement} ⬆️')
@@ -25,4 +28,10 @@ def simplexe(A):
     nb_pivotement += 1
     
     print(f'{X} \n')
+    
+  print(f'La fonction est maximié à {X[l-1, m-1]} \n')
+
+  p = point(X)
+  print(f'P* a les coordonnées {p} \n')
+  
   return X

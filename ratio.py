@@ -11,6 +11,7 @@ EXO 1 : Écrire un algo qui :
 '''
 
 def ratio(A, q):
+  # recupere les dimensions de la matrice
   l, m = np.shape(A)
   X = []
 
@@ -21,6 +22,6 @@ def ratio(A, q):
     if b > 0:
       X.insert(i, element / b)
     else:
-      X.insert(i, 10^6)
+      X.insert(i, 100000000)
 
   return np.argmin(X)
